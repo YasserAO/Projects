@@ -1,0 +1,90 @@
+/* Basic Animations */
+    /* Color Changing Animation */
+        @keyframes colorChange {
+            0% {
+                color: #ffffff; /* Starting color */
+                 }
+            40% {
+                color: rgb(145, 255, 163); /* Midway color during the animation */
+                 }
+            80% {
+                color: rgb(243, 255, 79); /* Ending color */
+                }
+            100% {
+                color: #ffffff;
+                    }
+        }
+
+    /* ScalesUp and Down animation for Buttons */
+
+        @keyframes scalesupdown{
+            0% {
+                transform: scale(1);
+            }
+    
+            30% {
+                transform: scale(1.10);
+
+                }
+            100% {
+                transform: scale(1.08);
+                }
+        
+        }
+
+
+
+    /* Main Background Color Change */
+
+        @keyframes BackgroundMain {
+            0%{
+      background-color: var(--color3);
+    }
+            50%{
+      background-color: #c54646;
+    }
+            100%{
+      background: var(--color3);
+            }
+    
+        }
+
+
+    /* Show animation for toggleOn */
+        @keyframes show{
+            100%{
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+    /* Hide Animation for toggleOff */
+        @keyframes hide{
+            100% {
+                opacity:0;
+                transform: none;
+                transform: scale(0.8);
+            }
+        }
+
+    /* Line Through animation */
+        @keyframes linecross {
+            100% {
+                text-decoration: line-through;
+                color: grey;
+            }
+        }
+        @keyframes delinecross {
+           100%{text-decoration: none;
+            color:black;}
+        }
+
+    /* Item Shifting Upwords */
+        @keyframes upwards {
+            0%{
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(var(--xcheight));
+            }
+        }

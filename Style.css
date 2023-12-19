@@ -1,0 +1,292 @@
+
+
+/* Importing Animation File  */
+    @import 'data/Styling/animation.css';
+/* Css Variables */
+  
+    :root{
+    
+    --color1: #20c6d8;
+    --font1: #ffffff; /* White for better contrast on #20c6d8 background */
+    
+    --color2: #1fcfae;
+    --font2: #ffffff; /* White for better contrast on #1fcfae background */
+    
+    --color3: #c54646;
+    --font3: #333333; /* Darker shade for better contrast on #a7e77a background */
+    
+    --color4: #f2e788;
+    --font4: #333333; /* Darker shade for better contrast on #f2e788 background */
+    
+    --color5: #f8e2c9;
+    --font5: #333333; /* Darker shade for better contrast on #f8e2c9 background */
+
+
+    /* js variable don't change */
+    --calibre:700;
+    /* main container  width */
+    --wmain:500px;
+    --hmain:600px;
+
+    /* Title width */
+    --wtitle:calc(var(--wmain)*0.9);
+
+    /* main tasklist container */
+    --wtcontainer:calc(var(--wmain)*0.8); 
+    --htcontainer:calc(var(--hmain)*0.6);
+    --tconheight:30px;
+    --icheight:calc(var(--htcontainer)*0.1);
+
+    
+
+    
+
+    /* item-container widths */
+    --wic:calc(var(--wmain)*0.7);
+    --winf:calc(var(--wmain)*0.6);
+    --w1:calc(calc(var(--wmain)*0.7)*0.8);
+    --w2:calc(calc(var(--wmain)*0.7)*0.2);
+    --icw:calc(var(var(--wmain))*0.09)
+
+    --test1:calc(var(--hmain)*0.5);
+    --test2:calc(var(--test1)*2);
+
+    /* Font Size Variables */
+    --tfont-size :calc(var(--wmain)*0.055);
+    --ifont-size :calc(var(--wmain)*0.04);
+    --infield: calc(var(--wmain)*0.05);
+
+
+    /* Add Button Dimensions */
+    --Waddbuttonbar:var(--wtcontainer);
+    --Haddbuttonbar:50px;
+
+
+    /* Css height animation for Elements */
+    --xcheight:10px;
+    
+
+  }
+
+
+  /* CSS KeyFrames */
+ 
+
+
+
+
+
+*,*::before,*::after{
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+/* Styling the html and body to center the items */
+  html{
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(253, 247, 193);
+      
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+    }
+
+    
+/* Main title Styling */  
+    div.main-title:hover{
+      transform:scale(1.001);
+      animation: colorChange 5s infinite;
+      
+
+    }
+    
+    
+    h1.main-title{
+      text-shadow: 0px 0px 10px  black;
+      padding-bottom: 10px;
+      cursor: default;
+      
+
+      
+    }                
+    div.main-title{
+      display: flex;
+      padding-bottom: 9px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+
+      border-radius: 10px 20px;
+
+      height: var(--tconheight);
+      width: var(--wtitle);
+      
+      align-items: center;
+      justify-content: center;
+
+      font-size: var(--tfont-size);
+      /* border: 1px solid black; */
+      background-color: var(--color1);
+      color:var(--font1);
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+      
+
+      
+    }
+
+/* Main Container */
+    main.main-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      border-radius: 5%;
+      
+      height: var(--hmain);
+      width: var(--wmain);
+      background-color: var(--color3);
+      
+    }
+
+/* Task Lists Container */
+    div.tasklist{
+
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color4);
+      align-items: center;
+
+      width: var(--wtcontainer);
+      height: var(--htcontainer);
+      /* padding-top: 15px;  */
+      overflow-y: auto;
+      overflow-x: hidden;
+      box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.3);
+      /* padding-left: 10px;     */
+
+    }
+
+/* Item Container  */
+    div.item-container{
+      display: grid;
+      grid-template-columns: var(--w1) var(--w2);
+      width: var(--wic);
+      
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+     
+      height: auto;
+      margin-top: 10px;
+      background-color: var(--color2);
+      align-items: center;
+      border-radius: 10px;
+      
+      
+    }
+    div.item-container:hover{
+      cursor: pointer;
+      transform: scale(1.04);
+      transition: transform 0.3s;
+      
+    }
+    
+    
+
+/* items text */
+    div.items{
+      padding-left: 5px;
+      font-family: 'Nunito', sans-serif;
+      font-size: var(--ifont-size);
+      user-select:  none;
+      
+
+    }
+
+/* Input Checkbox Styling */
+    input.taskcheckmark{
+      content: '';
+      border-radius: 2px;
+     
+      left: 0;
+      top: 1px;
+      width: var(--icw);
+      height: var(--icheight);
+      border: 1px solid #999; /* Checkbox border */
+      background-color: #fff; /* Checkbox background */
+    }
+
+
+
+/* Add Button Bar */
+    div.addbutton-bar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: var(--Waddbuttonbar);
+      
+      background-color: #e6e0b0d7;
+      position: absolute;
+    }
+    img.buttons:hover {
+
+      animation: scalesupdown 0.2s forwards;
+
+    }
+
+    #addtasktemp{
+      z-index: 1000;
+      position:absolute;
+      height: var(--htcontainer);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      /* transition:opacity 2s ease;
+      animation: show 0.3s 100ms ease forwards; */
+    }
+/* input button add */
+    #toggleAddButton{
+      margin-top: 100px;
+      margin-left: 20px;
+    }
+/* Input Field Styling */
+    textarea.input-field{
+      background-color: #f3e367;
+      border: none;
+      resize: none;
+      width: var(--winf);
+      font-size: var(--infield);
+      box-shadow:inset 0 0 5px 1px rgba(0, 0, 0, 0.2);
+      margin-top: 100px;
+      transform: scale(1);
+      transition: transform 0.3s;
+
+
+    }
+    textarea.input-field:focus{
+      transform:scale(1.05);
+      transition: transform 0.3s;
+      border: none;
+      outline: none;
+
+    
+      
+      
+    }
+    /* textarea.input-field:not(:focus){
+      transform: scale(1);
+      transition: transform 0.3s;
+      
+
+    } */
+
+    

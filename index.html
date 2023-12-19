@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Style.css" type="text/css" rel="stylesheet" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <script src="Script.js"></script>
+        <title>My to Do List</title>
+    </head>
+
+
+    <body>
+        
+        <!--Main Content Container-->
+        <main class="main-content">
+
+
+            <!--Main Title-->
+            <div class="main-title">
+                <h1 class="main-title">My To do List</h1>
+
+            </div>
+            
+            <!--The List Of Tasks, Overal Container-->
+            <div class="tasklist-container">
+                
+                
+                <div class="tasklist" id="tasklist">
+                    <!-- <div class="addbutton-bar" id="addtasktemp">
+                        <textarea  class="input-field" id="taskinputfield" onkeypress="pressed(event)" ></textarea>
+                    </div> -->
+
+
+                <!-- First task -->
+                <div id="itemcontainer1" class="item-container">
+                <div id="item1text" class="items" onclick="checkeditem(this)">Revice My lessons</div>
+                <input type="checkbox" id="item1" class="taskcheckmark" onclick="checkedbox(this)">
+                </div>
+
+                <!-- Second Task -->
+                <div id="itemcontainer2" class="item-container">
+                <div id="item2text" class="items" onclick="checkeditem(this)">Go for a walk outside</div>
+                <input type="checkbox" id="item2" class="taskcheckmark" onclick="checkedbox(this)">
+                </div>
+
+
+                <!-- Thrid Task -->
+                <div id="itemcontainer3" class="item-container">
+                <div id="item3text" class="items" onclick="checkeditem(this)">Create a webpage Desige</div>
+                <input type="checkbox" id="item3" class="taskcheckmark" onclick="checkedbox(this)">
+                </div>
+
+
+            </div>
+            <div class="addbutton-bar" id="addbuttonbar"><img src="data/img/add.svg" alt="Add Button" class="buttons" id="addbutton" onclick="fieldToggle()">
+            <img src="data/img/clear trash.svg" alt="clear button" class="buttons" id="clearbutton" onclick="Deleteitem()"></div>
+            
+            
+            
+            
+           
+            
+
+
+
+                
+                
+                
+
+
+            
+                
+
+
+            
+            
+
+
+
+
+        </main>
+
+
+
+
+
+        
+          
+
+
+         
+    
+    </body>
+
+
+</html>
