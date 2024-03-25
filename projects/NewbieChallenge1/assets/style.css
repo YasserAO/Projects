@@ -1,0 +1,264 @@
+/* ## Colors
+
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%) */
+
+
+
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: Hanken Grotesk;
+    
+}
+
+
+
+
+.container {
+    display: flex;
+    margin: 200px auto;
+    
+    width: 500px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.233);
+    border-radius: 30px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.container .header {
+    border-radius: 0 30px 30px 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(hsl(252, 100%, 67%),20%,hsl(241, 81%, 54%));
+    color: white;
+}
+
+.header p,h1{
+    text-align: center;
+}
+
+.result{
+    margin: 20px 0;
+    font-weight: bold;
+    opacity: 70%;
+    font-size: 18px;
+}
+
+.perc-circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(241, 81%, 54%);
+    width: 120px;
+    height:120px;
+    margin: 0 auto 30px;
+    border-radius: 100%;
+}
+
+p.big-number{
+    font-size: 45px;
+    font-weight: bold;
+}
+p.small-number{
+    font-size: 12px;
+    opacity: 60%;
+}
+
+
+h1{
+    font-size:22px;
+    margin: 0 0 10px;
+}
+
+p.small{
+    margin: 0 auto;
+    opacity:90%;
+    font-size: 14px;
+    font-weight: normal;
+    width: 80%;
+    opacity: 80%;
+}
+/* End of Left Slied */
+
+
+
+
+.content {
+    margin: 0 auto;
+    width: 50%;
+    padding: 0 20px;
+}
+
+p.title {
+    margin: 20px 0 0;
+    text-align: left;
+    /* border: 1px solid black; */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content ul{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+    width: 100%;
+}
+
+ul li{
+
+   display: flex;
+   justify-content: space-between;
+   padding: 0 10px;
+   height: 40px;
+   background-color: aqua;
+   border-radius:8px;
+   font-weight: bold;
+   font-size: 15px;
+
+}
+
+
+li p{
+    display: inline;
+}
+
+
+li .left, li .right{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+ul li:nth-child(1){
+    background-color: hsla(0, 100%, 67%, 0.2);
+    color: hsl(0, 100%, 67%);
+}
+
+ul li:nth-child(2){
+    background-color: hsla(39, 100%, 56%, 0.2);
+    color: hsl(39, 100%, 56%);
+}
+
+ul li:nth-child(3){
+    background-color: hsla(166, 100%, 37%, 0.2);
+    color: hsl(166, 100%, 37%);
+}
+
+ul li:nth-child(4){
+    background-color: hsla(234, 85%, 45%, 0.2);
+    color: hsl(234, 85%, 45%);
+
+}
+
+li .right{
+    color:hsl(224, 30%, 27%);
+}
+li .right p span{
+    opacity: 80%;
+}
+
+.continue  {
+    background: linear-gradient(hsl(252, 100%, 67%),20%,hsl(241, 81%, 54%));
+    height: 40px;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+    text-align: center;
+    
+}
+
+.continue:hover{
+   
+    background:linear-gradient(hsl(224, 30%, 27%),hsl(224, 30%, 27%));
+}
+
+
+
+.container{
+    scale: 1.2;
+}
+
+
+@media(max-width:768px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        overflow: none;
+        border-radius:0;
+        scale: 1;
+    }
+    .container .header{
+        width: 100%;
+        height: 40%;
+        border-radius: 0 0 20px 20px;
+        
+    }
+
+    p.small{
+        width: 250px;
+    }
+
+    .content{
+        width: 100%;
+        height: 60%;
+        padding: 0 40px;
+        
+    }
+    ul li{
+        height: 60px;
+    }
+    .continue{
+        height: 50px;
+    }
+
+
+
+
+
+}
