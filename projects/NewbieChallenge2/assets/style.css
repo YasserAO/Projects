@@ -1,0 +1,122 @@
+/* ## Colors
+
+### Primary
+
+- Green: hsl(75, 94%, 57%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Grey: hsl(0, 0%, 20%)
+- Dark Grey: hsl(0, 0%, 12%)
+- Off Black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 600, 700 */
+
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color:hsl(0, 0%, 8%);
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+}
+
+.container  {
+    position: absolute;
+    padding-top: 40px;
+    width: 90%;
+    max-width: 400px ;
+    height: fit-content;
+    border-radius: 18px;
+    background-color:hsl(0, 0%, 12%) ;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.pfp{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    border-radius: 100%;
+    /* background-color: white; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    scale: .6;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    width: fit-content;
+    color: white;
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    width: fit-content;
+    margin: 10px auto 20px;
+    color: hsl(75, 94%, 57%);
+}
+
+p{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+ul {
+    margin-top: 20px;
+    list-style-type: none;
+    width: 100%;
+    padding-top: 15px;
+}
+
+ul li{
+    background-color: hsl(0, 0%, 20%);
+    margin-bottom: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: .2s;
+    
+}
+
+ul li:hover{
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+}
