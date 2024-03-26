@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.fec {
+    
+}
+
+body {
+    background-color: rgb(247, 245, 174);
+    height: 100vh;
+    font-family: "Nunito", sans-serif;
+    padding-top: 50px;
+    
+}
+.container{
+    width:100%;
+    margin: 0 auto;
+    padding: 0 20px 50px 20px;
+
+}
+
+.fec {
+    
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 50px;
+    background-color: rgb(49, 53, 51);
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+
+}
+
+h1{
+    margin: 0 auto;
+    width:60%
+}
+
+p.diff{
+    width:280px;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(50, 51, 51, 0.986);
+    color: rgba(255, 255, 255, 0.89);
+    z-index: 1;
+}
+p.diff span{
+    color: rgb(112, 245, 205);
+    font-weight: 200;
+}
+
+ul{
+    list-style-type: none;
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    border-radius: 0 10px 10px 10px;
+    background-color: rgba(112, 245, 205, 0.555);
+    border: 5px solid rgba(50, 51, 51, 0.986);
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.178);
+    
+}
+
+
+li{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 245, 245);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    
+}
+
+a,a:active{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: tauri;
+    color: rgb(29, 23, 23);
+}
+
+
+
+/* Text Settings */
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+
+}
+
+p{
+    font-size: 2rem;
+}
+
+p.smallP{
+    width: 160px;
+}
+
+@media(min-width:768px){
+    .container {
+        width: 700px;
+        
+    }
+}
+
+@media(min-width:1200px){
+    .container{
+        width: 1000px;
+
+    }
+}
+
