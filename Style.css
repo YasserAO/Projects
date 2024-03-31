@@ -44,7 +44,7 @@ h1{
 }
 
 p.diff{
-    width:280px;
+    width:350px;
     height: 50px;
     padding-left: 10px;
     border-radius: 10px 10px 0 0;
@@ -68,6 +68,8 @@ ul{
     background-color: rgba(112, 245, 205, 0.555);
     border: 5px solid rgba(50, 51, 51, 0.986);
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.178);
+        
+    margin-bottom: 10px;
 
     
     
