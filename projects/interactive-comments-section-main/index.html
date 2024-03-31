@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/Styles/style.css">
+  <title>Frontend Mentor | Interactive comments section</title>
+
+</head>
+<body>
+  <div class="DeletePopUp">
+    <div class="DeleteLabel">
+      <h1>Delete Comment</h1>
+      <p>Are you sure you want to delete this comment?This will remove the comment and can't be undone.</p>
+      <div class="buttons">
+        <button class="btn grey cancel">No,Cancel</button >
+        <button  class="btn red accept">Yes,Delete</button >
+      </div>
+    </div>
+  </div>
+  <main>
+    <form id="commentForm" class="comment commentInput">
+      <label for="mainComment"></label>
+      <textarea type="text" id="mainComment" class="ipt" name="mainComment" placeholder="Add a comment..."></textarea>
+      <button class="btn user-Comment" type="button" id="submit-comment">Send</button>
+      <img src="images/avatars/image-juliusomo.png" alt="juliusomo">
+    </form>
+
+
+  </main>
+
+
+ <script src="assets/Scripts/main.js" type="module"></script>
+</body>
+</html>

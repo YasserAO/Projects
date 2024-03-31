@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root{
+    /* colors */
+        /* Primary */
+            --Moderate-blue: hsl(238, 40%, 52%);
+            --Soft-Red: hsl(358, 79%, 66%);
+            --Light-grayish-blue: hsl(239, 57%, 85%);
+            --Pale-red: hsl(357, 100%, 86%);
+
+        /* Neutral */
+
+            --Dark-blue: hsl(212, 24%, 26%);
+            --Grayish-Blue: hsl(211, 10%, 45%);
+            --Light-gray: hsl(223, 19%, 93%);
+            --Very-light-gray: hsl(228, 33%, 97%);
+            --White: hsl(0, 0%, 100%);
+
+
+    /* Fonts */
+        /* RUbik */
+            --ff-rubik:"Rubik", sans-serif;
+            --fw-light:400;
+            --fw-bold:500;
+            --fw-ebold:700;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--Light-gray);
+    min-height: 100vh;
+    height: auto;
+    font-family: var(--ff-rubik);
+    font-size: 1rem;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    transition: width 0.3s;
+}
+.comment-label{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: column;
+    transition: 3s;
+}
+.comment{
+    overflow:'hidden';
+    position: relative;
+    background-color: var(--White);
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    padding: 20px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+    transition:  0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+}
+.header .you{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Moderate-blue);
+    color: var(--White);
+    width: 35px;
+    
+}
+.header img, form img, .comment > img {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.name  {
+    color: var(--Dark-blue);
+    font-weight: var(--fw-ebold);
+    
+}
+
+.time {
+    font-weight: var(--fw-light);
+    color: var(--Grayish-Blue);
+    
+}
+
+.content {
+    font-weight: var(--fw-light);
+    margin-bottom: 15px;
+    color: var(--Grayish-Blue);
+}
+.tag {
+    font-weight: var(--fw-ebold);
+    color: var(--Moderate-blue);
+}
+
+.score  {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: var(--Light-gray);
+    
+}
+.score img{
+    cursor: pointer;
+    transition: .1s;
+}
+.score img:hover{
+    filter: brightness(60%) hue-rotate(310deg);
+    
+}
+.score img:active{
+    scale: 1.1;
+}
+
+.score p{
+    color: var(--Moderate-blue);
+    font-weight: var(--fw-bold);
+}
+
+.reply {
+    scale: .9;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display:flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 35px;
+    cursor: pointer;
+    user-select: none;
+    transition: .1s;
+}
+.reply:hover{
+    opacity: .8;
+}
+.reply:active{
+    opacity: .5;
+    
+}
+.user-delete,.user-deleteMain{
+    width: 80px;
+    right: 90px;
+}
+.reply p, .edit p{
+    font-weight: var(--fw-ebold);
+    color: var(--Moderate-blue);
+    font-size: 1rem;
+}
+p.delete{
+    color: var(--Soft-Red);
+}
+
+
+.sub-comment{
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* gap: 10px; */
+    align-items: end;
+    width: 100%;
+    
+
+}
+.sub-comment::before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    left :0;
+    opacity: .3;
+    background-color: var(--Light-grayish-blue);
+}
+.sub-comment .comment{
+    margin-bottom: 10px;
+}
+
+.sub-comment > div, .sub-comment form{
+    width: 95%;
+    
+}
+
+
+
+.commentInput{
+    margin-top: 10px;
+    
+    
+} 
+
+
+.commentInput button{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.commentInput img{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+.commentInput input {
+    margin-bottom: 15px;
+    
+    
+}
+
+
+
+textarea{
+    resize: none;
+    font-size: 1.2rem;
+    font-weight: var(--fw-light);
+    font-family: var(--ff-rubik);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1.5px solid var(--Light-gray);
+    color: var(--Grayish-Blue) ;
+    line-height: 1;
+    padding: 15px 20px;
+   
+    
+}
+textarea:active,textarea:focus{
+    border-color: var(--Moderate-blue);
+}
+
+.btn {
+    font-family: var(--ff-rubik);
+    font-weight: var(--fw-bold);
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: var(--Moderate-blue);
+    color: white;
+    transition: .2s;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: .8;
+}
+.btn:active{
+    opacity: .5;
+}
+
+.user textarea{
+    width: 100%;
+    font-size: 1rem;
+    height: 100px;
+    padding: 5px;
+}
+
+.user  button {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    
+}
+
+
+
+.grey {
+    background-color: var(--Grayish-Blue);
+}
+.red{
+    background-color: var(--Soft-Red);
+}
+.DeleteLabel button{
+    width: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.DeleteLabel .buttons{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.DeletePopUp{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.521);
+}
+
+.DeleteLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 320px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.DeleteLabel h1{
+    font-weight: var(--fw-bold);
+    color: var(--Dark-blue);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.DeleteLabel p{
+    font-size: 1rem;
+    color: var(--Grayish-Blue);
+    margin-bottom: 10px;
+}
+
+
+
+@media(min-width:768px){
+    main{
+        width: 700px;
+        max-width: none;
+    }
+    .reply {
+        top: 20px;
+    }
+    .comment{
+        padding-left: 75px;
+    }
+    .score {
+        flex-direction: column;
+        height: 90px;
+        width: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    textarea{
+        width: 80%;
+    }
+    .commentInput{
+        padding-bottom: 20px;
+
+    }
+    .commentInput img{
+        top:20px;
+    }
+    .commentInput .btn{
+        top: 20px;
+    }
+    .user  button{
+        position: absolute;
+        margin: 0;
+        bottom: 10px;
+        right: 20px;
+
+        transform: none;
+    }
+}
+
+@media(min-width:1200px){
+    main{
+        width: 900px;
+    }
+    textarea{
+        width: 85%;
+    }
+}
+
+
+#subCommentForm {
+    overflow: hidden;
+    
+    transition: .3s, opacity 0s;
+    
+}
+
+.hidden-height-margin-padding{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    transition: 2s;
+}
