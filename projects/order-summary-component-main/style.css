@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root{
+    /* Colors */
+        --Paleblue: hsl(225, 100%, 94%);
+        --Brightblue: hsl(245, 75%, 52%);
+
+        --Verypaleblue: hsl(225, 100%, 98%);
+        --Desaturatedblue: hsl(224, 23%, 55%);
+        --Darkblue: hsl(223, 47%, 23%);
+
+    /* Fonts */
+        --ft-rhd:"Red Hat Display", sans-serif;
+        --ft-regular:500;
+        --ft-bold:700;
+        --ft-ebold:900;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    
+    background: url(images/pattern-background-mobile.svg);
+    background-color: var(--Paleblue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--ft-rhd);
+}
+main{
+    margin: 70px auto;
+    padding-bottom: 30px;
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+.header{
+    width: 100%;
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: var(--ft-ebold);
+    margin: 20px auto;
+    text-align: center;
+    color:var(--Darkblue) ;
+}
+
+p{
+    font-size: 1rem ;
+    color: var(--Desaturatedblue);
+}
+
+main > p{
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+h2{
+    font-size: 1rem;
+    color: var(--Darkblue);
+}
+
+.offer {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: var(--Verypaleblue);
+    padding: 10px 20px; 
+    border-radius: 15px;
+}
+.offer a {
+    text-align: right;
+    font-weight: var(--ft-ebold);
+    width: 30%;
+    
+    transition: .3s;
+    
+}
+.offer a:hover, .offer a:active{
+    color: var(--Brightblue);
+    opacity: .7;
+    text-decoration: none;
+}
+
+
+button {
+    display: block;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    background-color:var(--Brightblue) ;
+    color: white ;
+    font-family: var(--ft-rhd);
+    font-size: 1.1rem;
+    font-weight: var(--ft-regular);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.301);
+    transition: .3s;
+
+}
+button:hover{
+    scale: 1.02;
+    opacity: .7;
+
+}
+
+main > h2 {
+    text-align: center;
+    font-weight: var(--ft-bold);
+    opacity: .6;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
+}
+
+
+main > h2:hover{
+    scale: 1.02;
+    opacity: 1;
+}
+
+a:hover{
+
+}
