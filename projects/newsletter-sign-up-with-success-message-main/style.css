@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+:root {
+    /* Max-width */
+        --max-width:768px;
+        --max-width-main:900px;
+    /* COlors */
+        /* ### Primary */
+
+            --Tomato: hsl(4, 100%, 67%);
+            --Tomato-less: hsla(4, 100%, 67%, 0.308);
+    
+        /* ### Neutral */
+    
+            --Dark-Slate-Grey: hsl(234, 29%, 20%);
+            --Charcoal-Grey: hsl(235, 18%, 26%);
+            --Grey: hsl(231, 7%, 60%);
+            --White: hsl(0, 0%, 100%);
+        
+    /* Fonts */
+        /* Family */
+
+            --ftf-roboto:"Roboto", sans-serif;
+
+        /* Weights */
+
+            --ftw-normal:400;
+            --ftw-bold:700;
+
+
+}
+
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ftf-roboto);
+}
+
+body{
+    background-color: var(--Dark-Slate-Grey);
+    height: 100vh;
+    
+}
+
+main{
+    margin: 0 auto;
+    background-color: var(--White);
+    width: 100%;
+    min-height: 100%;
+    max-width: var(--max-width-main);
+    transition: .1s;
+    
+}
+
+
+.sign-up > img{
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.container{
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width:90%;
+    height: fit-content;
+    max-width: var(--max-width);
+}
+
+
+.container > h1 {margin-bottom: 20px;}
+
+.updates{padding: 20px 0;}
+
+.update {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+    
+.emails{
+    display: flex;
+    justify-content: space-between;
+}
+p.small{padding: 10px 0;}
+p.error{color: var(--Tomato);}
+
+input {
+    height:50px;
+    width: 100%;
+    max-width: var(--max-width);
+    outline: none;
+    border: 1px solid var(--Grey);
+    border-radius: 10px;
+    padding-left: 15px;
+    
+}
+
+.errorEmail{
+    background-color: var(--Tomato-less);
+    border-color: var(--Tomato);
+    color: var(--Tomato);
+}
+
+
+/* Success */
+.success {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    margin: auto auto;
+    height: 100vh;
+}
+.button-container{
+    position: relative;
+    height: 80%;
+}
+.btn__seccess{
+    position: absolute;
+    bottom: 0;
+}
+.success > img {margin-bottom: 40px;}
+.success h1{margin-bottom: 20px;}
+.success p{margin-bottom: 20px;}
+span{font-weight: var(--ftw-bold);}
+
+
+
+@media(min-width:768px){
+    main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 20px;
+        padding: 20px;
+        min-height:fit-content;
+    }
+    .sign-up{
+        display: flex;
+        justify-content: center;
+        flex-flow: row-reverse;
+       
+    }
+    .sign-up > img{
+        max-width: 40%;
+    }
+    .container{
+        margin: auto 0;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .success{
+        height: fit-content;
+    }
+    .button-container{
+        position: relative;
+        height: auto;
+    }
+    .btn__seccess{position: static;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Text Styling */
+h1{
+    color: var(--Dark-Slate-Grey);
+    font-size: 2.5rem;
+}
+p{
+    color: var(--Dark-Slate-Grey);
+    font-weight: var(--ftw-normal);
+    font-size: 1rem;
+}
+p.small {
+    font-size: .9rem;
+    font-weight: var(--ftw-bold);
+}
+
+
+
+
+
+/* Buttons Styling */
+.btn{
+    width:100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    max-width: var(--max-width);
+    margin: 20px 0;
+    background-color: var(--Dark-Slate-Grey);
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Extra Classes Settings */
+.hide{display: none;}
+.smallMain{max-width:400px;}
