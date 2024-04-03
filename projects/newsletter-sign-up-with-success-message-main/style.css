@@ -11,6 +11,7 @@
 
             --Tomato: hsl(4, 100%, 67%);
             --Tomato-less: hsla(4, 100%, 67%, 0.308);
+            --gradient : linear-gradient(rgba(255,84,118,1),rgba(255,103,62,1));
     
         /* ### Neutral */
     
@@ -210,6 +211,14 @@ p.small {
     background-color: var(--Dark-Slate-Grey);
     color: white;
     cursor: pointer;
+    
+}
+
+.btn:active,.btn:hover{
+    background: var(--gradient);
+}
+.btn:hover{
+    scale:1.01;
 }
 
 
