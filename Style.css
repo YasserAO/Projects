@@ -97,6 +97,7 @@ a,a:active{
 
 
 
+
 /* Text Settings */
 
 h1 {
@@ -111,6 +112,10 @@ p{
 
 p.smallP{
     width: 160px;
+}
+
+a span{
+    color: rgb(215 93 93);
 }
 
 @media(min-width:768px){
