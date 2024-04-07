@@ -39,7 +39,8 @@ h1{
 }
 
 p.diff{
-    width:350px;
+    width:100%;
+    max-width: 350px;
     height: 50px;
     padding-left: 10px;
     border-radius: 10px 10px 0 0;
@@ -54,7 +55,6 @@ p.diff span{
 
 ul{
     list-style-type: none;
-    height: 200px;
     width: 100%;
     margin: 0 auto;
     border-radius: 0 10px 10px 10px;

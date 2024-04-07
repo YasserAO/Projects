@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+:root{
+    /* ## Colors */
+
+        /* ### Primary */
+
+            --Light-Cyan: hsl(193, 38%, 86%);
+            --Neon-Green: hsl(150, 100%, 66%);
+
+        /* ### Neutral */
+
+            --Grayish-Blue: hsl(217, 19%, 38%);
+            --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+            --Dark-Blue: hsl(218, 23%, 16%);
+
+        /* fonts */
+
+            --ff:"Manrope", sans-serif;
+            --fw:800;
+
+}
+
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+    font-weight: var(--fw);
+}
+
+body{
+    background-color: var(--Dark-Blue);
+    
+}
+
+main{
+    position: relative;
+    background-color: var(--Dark-Grayish-Blue);
+    margin: 150px auto;
+    max-width: 25rem;
+    min-height: 270px;
+    width: 90%;
+    padding: 40px 40px 70px;
+    border-radius: 20px;
+    
+}
+
+h1{
+    font-weight: 500;
+    text-align: center;
+    color: var(--Neon-Green);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+}
+
+
+p{
+    color: var(--Light-Cyan);
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    
+    
+}
+
+
+
+
+.divider{
+    background-image: url(images/pattern-divider-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    z-index: 99;
+}
+
+.dice-container{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: fit-content;
+
+}
+.dice{
+    position: relative;
+    background-color: var(--Neon-Green);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .2s;
+    user-select: none;
+}
+.dice:hover{
+    box-shadow: 0 0 20px 3px var(--Neon-Green);
+    
+}
+.dice svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+@media(min-width:768px){
+    .divider{
+        background-image: url('images/pattern-divider-desktop.svg');
+    }
+}
