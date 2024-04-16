@@ -56,8 +56,12 @@ p.diff span{
 }
 
 ul{
-    padding: 5px 20px 10px;
+    padding: 5px 20px 20px;
     list-style-type: none;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 5px;  
 }
 
 
