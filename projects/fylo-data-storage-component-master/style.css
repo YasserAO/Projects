@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    /* colors */
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --Very-Dark-BlueHSL:229, 57%, 11%;
+
+    /* Fonts */
+    --ftnRaleway:"Raleway", sans-serif;
+    --ftwNormal:400;
+    --ftwBold:700;
+}
+
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ftnRaleway);
+    font-weight: var(--ftwNormal);
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    background-image:url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 0 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.fylo{
+    padding: 2rem 2.5rem;
+    border-radius: 10px 5rem 10px 10px;
+    background-color: var(--Dark-Blue);
+    overflow: hidden;
+    width: 100%;
+}
+
+.header{margin-bottom: 25px;}
+
+.icons{
+    display: flex;
+    gap: 20px;
+}
+
+img{width: 50%;}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 4px;
+}
+
+.loading{
+    position: relative;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px;
+    padding: 2rem 2rem 3rem;
+    width: 100%;
+}
+
+.note{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    position: absolute;
+    top:100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    background-color: white;
+    border-radius: 10px;
+    width: 140px;
+    height: 60px;
+}
+.note p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: var(--ftwBold);
+    color: var(--Grayish-Blue);
+}
+.note p span{
+    font-size: 2rem;
+    font-weight: var(--ftwBold);
+    color: var(--Dark-Blue);
+
+}
+
+.loading > p{
+    text-align: center;
+    font-size: .8rem;
+    color:var(--Pale-Blue)
+}
+.loading > p span{
+    font-weight: var(--ftwBold);
+}
+
+/* Loadbar Settings Start*/
+.loadbar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 18px;
+    padding: 2px 3px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+}
+
+.innerBar{
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    width: 0%;
+    min-width: fit-content;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#ffbfcb 0%, #ff5476 100% );
+    padding: 1px;
+    
+
+    animation-name: circleAnimation ;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: .2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+.circle{
+    width: 12px;
+    height: 100%;
+    border-radius: 100%;
+    background-color: white;
+    opacity: .9;
+}
+
+/* Loadbar Settings End*/
+
+
+.storageInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.storageInfo p{
+    font-weight: var(--ftwBold);
+    font-size: 0.8rem;
+    color: var(--Pale-Blue);
+}
+
+
+
+
+.half-arrow{
+    display: none;
+    position: absolute;
+    top:95%;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    border: 15px solid transparent;
+    border-top:15px solid rgb(255, 255, 255);
+    border-right:15px solid rgb(255, 255, 255);
+}
+
+@media(min-width:768px){
+    body{
+        background: url(images/bg-desktop.png), hsl(var(--Very-Dark-BlueHSL));
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        
+    }
+    main {
+        flex-direction: row;
+        max-width: 700px;
+    }
+    .fylo{
+        max-width: 300px;
+    }
+    .loading{
+          text-align: left;
+    }
+    .note{
+        border-radius:10px 10px 0 10px ;
+        top: unset;
+        left: unset;
+        right: 2rem;
+        
+        bottom: 100%;
+        transform: translate(0,20%);
+        
+    }
+    .half-arrow{
+        display: block;
+    
+}
+}
+@media(min-width:1200px){
+    main{
+        max-width: 1000px;
+    }
+}
+
+
+
+
+
+
+/* Animation Settigs */
+@keyframes circleAnimation {
+    30%{width: 70%;}
+    
+    /* 75%{width: 75%;} */
+    100% {width: 81%;}
+}
+
+
+
+
+
