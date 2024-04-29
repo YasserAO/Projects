@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+:root{
+    /* ### Primary */
+
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    
+    /* ### Neutral */
+    
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+
+    /* Fonts */
+    --ft-family-Outfit:"Outfit", sans-serif;
+        /* 400, 600, 700 */
+    --ft-family-YoungSerif:"Young Serif", serif;
+        /* 400 */
+        
+}
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Eggshell) ;
+    
+}
+
+main{
+    width: 100%;
+    
+    padding:0 30px 50px;
+    background-color: var(--White);
+}
+
+.banner{
+    width: 100%;
+    background-color: white;
+    
+}
+
+.banner img{
+    width: 100%;
+}
+
+h1{
+    padding: 20px 0;
+    font-family: var(--ft-family-YoungSerif);
+    font-weight: 400;
+    color: var(--Dark-Charcoal);
+    line-height: 1;
+    font-size: 2.2rem;
+}
+
+h2{
+    margin: 20px auto;
+    font-family: var(--ft-family-YoungSerif);
+    font-weight: 400;
+    color: var(--Nutmeg);
+    font-size: 1.8rem;
+    
+}
+
+h3{
+    padding: 20px 0;
+    font-family: var(--ft-family-Outfit);
+    font-weight: 600;
+    color: var(--Dark-Raspberry);
+    font-size: 1.3rem;
+}
+
+p{
+    font-family: var(--ft-family-Outfit);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--Wenge-Brown);
+}
+p span {
+    font-weight: 700;
+}
+ul {
+    list-style-position: outside;
+    padding: 0 20px;
+
+}
+
+main > p {
+    margin: 0 auto 20px;
+}
+
+.prepTime{
+    width: 100%;
+    background-color: var(--Rose-White);
+    padding: 0 30px 30px;
+    border-radius: 10px;
+}
+
+
+
+.prepTime li{
+    line-height: 1.3;
+    padding-left: 10px;
+}
+
+.prepTime li p {
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+.prepTime li::marker{
+    font-size: .75rem;
+    color: var(--Nutmeg);
+}
+
+
+
+.Ingredients li p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.Ingredients li, .Instructions li{
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.Ingredients li, .Instructions li::marker{color: var(--Nutmeg);}
+
+.Instructions{list-style-type: decimal;}
+
+.Instructions li::marker{
+    font-family: var(--ft-family-Outfit);
+    font-weight: 700;
+}
+
+.Ingredients , .Instructions {
+    margin-bottom: 30px;
+}
+
+
+
+.nut {
+    display: flex;
+    padding-left: 20px;
+    
+}
+.nut:not(:last-child){
+    margin-bottom: 10px;
+}
+.nut:not(:first-child){
+    margin-top: 10px;
+}
+
+.nut p {
+    width: 50%;
+}
+
+.nut p:nth-of-type(2){
+    font-weight: 700;
+    color: var(--Nutmeg);
+}
+
+hr {
+    
+    border: none;
+    background-color: var(--Light-Grey);
+    height: 1px;
+}
+
+
+@media(min-width:768px){
+    body{
+        padding: 50px 0;
+    }
+    .banner {
+        border-radius: 20px 20px 0 0;
+        padding: 30px;
+        width: 600px;
+    }
+    .banner img{
+        border-radius: 20px;
+    }
+    main {
+        border-radius: 0 0 20px 20px;
+        width: 600px;
+    }
+}
