@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/* Navigation Styling */
+@import url(nav.css);
+
+
+
+
+:root{
+    /* Colors */
+    /* ### Primary */
+
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    
+    /* ### Neutral */
+    
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    /* --Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%); */
+
+
+
+    /* fonts */
+    --ft-family-Kumbh:"Kumbh Sans", sans-serif;
+    --ft-weight-normal:400;
+    --ft-weight-bold:700;
+    
+    /* width */
+    --main-side-padding:20px;
+}
+
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ft-family-Kumbh);
+}
+
+
+
+
+
+
+body{position: relative;}
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+li a,li a:visited{
+    font-weight: var(--ft-weight-bold);
+    font-size: 1.2rem;
+    color: var(--Very-dark-blue);
+}
+
+
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.product{
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+
+.productImg{
+    max-height: 400px;
+    overflow: hidden;
+}
+.product img{
+    display: block;
+    width: 100%;
+}
+
+.nextButton,.previousButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--White); 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.nextButton{right: var(--main-side-padding)}
+
+.previousButton{left: var(--main-side-padding)}
+
+.productSlider{
+    margin: 0 auto;
+    display: none;
+    padding: 5px;
+    height: fit-content;
+    width: fit-content;
+}
+.productSlider img{
+    display: block;
+    width: 100%;
+}
+
+.thumbContainer{
+    border-radius: 10px;
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    /* user-drag:none; */
+    /* -webkit-user-drag: none; */
+    
+}
+
+.selectedThumb{
+    border: 2px solid var(--Orange);
+    
+    
+}
+.selectedThumb img{
+    opacity: .3;
+    
+}
+
+.productInformation{
+    padding: 20px var(--main-side-padding);
+}
+
+.companyName{
+    color: var(--Orange);
+    font-weight: var(--ft-weight-bold);
+    font-size: .8rem;
+    text-transform: uppercase;
+    
+}
+
+h1{
+    color: var(--Very-dark-blue);
+    font-weight: var(--ft-weight-bold);
+    line-height: 1;
+    padding: 20px 0;
+}
+
+p.desc{
+    color: var(--Dark-grayish-blue);
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.price p{font-weight: var(--ft-weight-bold)}
+
+.now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    
+    
+}
+.ex{
+    text-decoration: line-through;
+    color: var(--Grayish-blue);
+}
+.now span{
+    color: var(--Orange);
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 2px 5px;
+    background-color: var(--Pale-orange);
+}
+
+.productBuy {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.quantity{
+    display: flex;
+    justify-content: space-around;
+    
+    /* padding: 20px 30px; */
+    background-color: var(--Light-grayish-blue);
+    border-radius: 10px;
+    font-weight: var(--ft-weight-bold);
+    width: 100%;
+    
+}
+.quantity span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minusButton,.plusButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.buy{
+    
+    border-radius: 10px;
+    color: white;
+    background-color: var(--Orange);
+    cursor: pointer;
+    width: 100%;
+    user-select: none;
+    transition: .3;
+    
+}
+.buy:hover,.buy:active{
+    opacity: .7;
+}
+.quantity,.buy{
+    height: 60px;
+}
+
+.buy svg {
+    fill: white;
+}
+
+
+a,a:active{
+    text-decoration: none;
+}
+
+.closeButton,.menuIcon,.cartimg,.userImg,.delete{
+    cursor: pointer;
+    user-select: none;
+}
+
+.cartimg{
+    position: relative;
+}
+.notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    scale: 1.2;
+    
+    border-radius: 5px;
+    width: 15px;
+    height: 10px;
+    font-size: .7rem;
+    color: white;
+    background-color: var(--Orange);
+}
+
+.basket{
+    display: none;
+    position: absolute ;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.418);
+    border-radius: 10px;
+    width: 95%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
+    z-index: 1;
+    
+}
+.basket > p {
+    font-size: 1.1rem;
+    padding-left: 20px;
+    font-weight: var(--ft-weight-bold);
+    margin-bottom: 20px;
+}
+.basket hr{
+    border: none;
+    background-color: var(--Grayish-blue);
+    height: 1px;
+}
+.content{
+    color: var(--Dark-grayish-blue);
+    padding: 20px;
+}
+.content span{
+    margin-left: 10px;
+    color: var(--Very-dark-blue);
+    font-weight: var(--ft-weight-bold);
+}
+
+.empty{
+    font-weight: var(--ft-weight-bold);
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fontBold{
+    font-weight: var(--ft-weight-bold);
+}
+
+
+.hidden {
+    display: none; 
+}
+
+.thumb img{
+    display: block;
+    width: 100%;
+}
+.thumb{
+    max-width: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.item{
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.delete {
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+}
+.flexGrow{
+    flex-grow: 1;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.flexEnd{
+    justify-content: end;
+}
+
+@media(min-width:768px){
+    body{
+        position: unset;
+    }
+    .container{
+        position: relative;
+    }
+    .basket{
+        /* top: 0; */
+        left: unset;
+        right: -40px;
+        transform: unset;
+        max-width: 300px;
+    }
+   
+    
+    .closeButton,.menuIcon{display: none}
+
+   
+    
+    li a,li a:visited{
+        color: var(--Dark-grayish-blue);
+        font-weight: var(--ft-weight-normal);
+        font-size: 1rem;
+    }
+    .container{
+        width: 700px;
+    }
+    main{
+        padding: 100px 0;
+    }
+    main .container{
+        display: flex;
+        gap: 10px;
+    }
+    .productImg{
+        border-radius: 10px;
+    }
+    .productSlider{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .productBuy{
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+    .quantity{
+        max-width: 40%;
+    }
+    .quantity,.buy{
+        height: 55px;
+    }
+    
+    .productInformation{
+        /* padding: unset; */
+        max-width: 50%;
+    }
+    .price{
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        box-sizing: inherit;
+        margin-bottom: 1px;
+        
+        
+    }
+
+   
+}
+
+
+.orangeBottomBorder{
+    border-bottom:3px solid var(--Orange);
+    margin-bottom: 0px;
+}
+
+@media(min-width:1200px){
+    .container{
+        width: 1000px;
+    }
+    .productInformation{
+        padding: 80px 30px 0 100px;
+    }
+    .productSlider{
+        max-height: 90px;
+        gap: 30px;
+    }
+    .basket{
+        right: -100px;
+        max-width: 400px;
+    }
+    .thumbContainer{
+        height: 90px;
+        width: 90px;
+    }
+    
+}
