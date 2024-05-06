@@ -1,4 +1,4 @@
-let path='../images/'
+let path='images/'
 
 const thumbnails = [
     `${path}image-product-1-thumbnail.jpg`,
