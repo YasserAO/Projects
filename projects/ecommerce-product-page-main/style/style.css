@@ -434,7 +434,7 @@ a,a:active{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        
         box-sizing: inherit;
         margin-bottom: 1px;
         
@@ -445,10 +445,7 @@ a,a:active{
 }
 
 
-.orangeBottomBorder{
-    border-bottom:3px solid var(--Orange);
-    margin-bottom: 0px;
-}
+
 
 @media(min-width:1200px){
     .container{
