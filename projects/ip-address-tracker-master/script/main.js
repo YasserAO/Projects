@@ -2,7 +2,7 @@ import pushData from "./structure.js";
 import getData from "./fetcher.js";
 import MapModule from "./mapscript.js";
 import isValidIP from "./ipcheck.js";
-import dataCreator from "./Data.js";
+import dataCreator from "./data.js";
 
 const { mapscript, changeLocation } = MapModule;
 
