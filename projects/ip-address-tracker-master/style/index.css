@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-rubik);
+}
+
+
+:root{
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+
+    --font-rubik :"Rubik", sans-serif;
+    --weight-bold: 700;
+    --weight-normal: 500;
+    --weight-light: 400;
+    --main-height:25rem;
+    --map-height: calc(100vh - var(--main-height));
+
+
+}
+
+body{
+     height: 100vh;
+}
+main{
+    position: relative ;
+    background-image: url('../images/pattern-bg-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    
+    height: var(--main-height);
+    
+    padding: 2rem 1.25rem 0;
+    transition: all .3s;
+    
+
+}
+
+
+h1{
+    font-size: 1.8rem;
+    font-weight: var(--weight-normal);
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 60px;
+    width: 300px;
+    margin: 0 auto;
+    transition: all .3s;
+    
+}
+
+input{
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 85%;
+    height: 100%;
+    font-size: 1.25rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    
+}
+
+input::placeholder{
+    font-size: .9rem;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--weight-bold);
+    color: white;
+    width: 15%;    
+    height: 100%;
+    background-color: black;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 99999999;
+
+    
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    top: 100%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 1rem;
+    transition: all .3s;
+    box-shadow: 0px 2px 20px 3px #00000017;
+}
+
+
+
+.informations h2{
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--Dark-Gray);
+    font-size: .7rem;
+    font-weight: var(--weight-bold);
+    letter-spacing: 3px;
+    padding-bottom: .5rem;
+
+}
+.informations p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+
+#map { height: var(--map-height) }
+
+
+@media(min-width:375px){
+    main{
+        background-image: url('../images/pattern-bg-desktop.png');
+        background-size:cover;
+        /* height:280px; */
+    }
+}
+
+
+@media(min-width:648px){
+    .search{
+        width: 500px;
+    }
+    .informations{
+        width: 500px;
+    }
+}
+
+@media(min-width:768px){
+    .informations {
+        flex-direction: row;
+        align-items: start;
+        
+        width: 700px;
+        padding: 2rem 2rem;
+        height:150px;
+        
+    }
+
+    .informations h2,.informations p {text-align: left;}
+   
+
+    .informations > div{
+        position: relative;
+        width: 100%;
+    }
+    .informations > div:not(:last-child):after {
+        content: "";
+        position: absolute;
+        height:50px;
+        top: 0;
+        right: 0;
+        border-right: 1px solid var(--Dark-Gray);
+    }
+}
+
+@media(min-width:1200px){
+    .informations{
+        width: 1000px;
+    }
+}
